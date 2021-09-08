@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:preview/UI/Screens/AlbumPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -51,7 +52,9 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-      ),
+        
+     body:AlbumPage() ),
+      
     );
     
   }

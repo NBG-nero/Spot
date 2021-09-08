@@ -33,6 +33,7 @@ return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
             color: Colors.grey,
             onPressed: ()=> themeProvider.setTheme(ThemeData.dark())
             ),
+            SizedBox(height:10),
             MaterialButton(child:Text('Light Theme'),
             elevation: 10,
             color: Colors.grey,

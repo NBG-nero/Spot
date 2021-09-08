@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preview/Providers/Album_Provider.dart';
 import 'package:preview/Providers/Theme_Provider.dart';
 import 'package:provider/provider.dart';
 import 'Routes.dart/route_gen.dart';
@@ -8,6 +9,10 @@ void main() => runApp(MultiProvider(
         ChangeNotifierProvider(
           create: (_) => ThemeProvider(ThemeData.light()),
         ),
+        ChangeNotifierProvider(
+          create: (_) => AlbumProvider()),
+            
+        
       ],
       child: Preview(),
     ));

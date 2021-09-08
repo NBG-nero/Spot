@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:preview/Screens/HomePage.dart';
-import 'package:preview/Screens/ThemeScreen.dart';
+import 'package:preview/UI/Screens/AlbumPage.dart';
+import 'package:preview/UI/Screens/HomePage.dart';
+import 'package:preview/UI/Screens/ThemeScreen.dart';
 
 
 class RouteGenerator {
@@ -17,7 +18,10 @@ class RouteGenerator {
         // }
         return MaterialPageRoute(builder: (_) => ThemeScreen());
       // if args is not of the correct type return ana error Page,
-      // you can also throw ana exception
+      // you can also throw an exception
+      case '/AlbumPage':
+       return MaterialPageRoute(builder: (_) => AlbumPage());
+       
       return _errorRoute();
       // return _onBasicAlertPressed(Context); 
       
