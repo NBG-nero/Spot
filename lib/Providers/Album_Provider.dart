@@ -13,7 +13,7 @@ class AlbumProvider extends ChangeNotifier {
       print('An error occured');
     } else {
       _model = result;
-      notifyListeners();
+      // notifyListeners();
     }
   }
 }

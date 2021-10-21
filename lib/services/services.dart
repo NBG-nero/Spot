@@ -12,6 +12,8 @@ class Services {
         // print(model);
         return model;
       }
-    } catch (err) {}
+    } catch (err) {
+      print(err);
+    }
   }
 }

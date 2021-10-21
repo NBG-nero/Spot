@@ -20,24 +20,25 @@ class _AlbumPageState extends State<AlbumPage> {
           body: FutureBuilder(
               future: albumProvider.getAlbums(),
               builder: (context, snapshot) {
+                if (albumProvider.model.isEmpty) {
+                  print('ass');
+                  return Container();
+                }
                 return ListView.builder(
                   shrinkWrap: true,
                   itemCount: albumProvider.model.length,
                   itemBuilder: (context, index) {
                     Model m = albumProvider.model[index];
                     return Material(
-                      child: 
-                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                          elevation: 10,
-                          child:
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text('${m.id} ${m.title} ${m.userId}'),
-                              )),
-                        ),
-                      
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                            elevation: 10,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text('${m.id} ${m.title} ${m.userId}'),
+                            )),
+                      ),
                     );
                   },
                 );

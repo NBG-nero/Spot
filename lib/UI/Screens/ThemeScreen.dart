@@ -29,15 +29,16 @@ return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
           child: Column(children: [
             MaterialButton(child:Text('Dark Theme'),
             elevation: 10,
-            
             color: Colors.grey,
-            onPressed: ()=> themeProvider.setTheme(ThemeData.dark())
+            onPressed: ()=> themeProvider.toggleTheme(true)
             ),
+
             SizedBox(height:10),
+            
             MaterialButton(child:Text('Light Theme'),
             elevation: 10,
             color: Colors.grey,
-            onPressed: ()=> themeProvider.setTheme(ThemeData.light())
+            onPressed: ()=>  themeProvider.toggleTheme(false)
             ),
           ],),
         )
